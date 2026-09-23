@@ -12,7 +12,8 @@
       --accent-color: #f5c518;
       --dark-text: #1a1a1a;
       --gray-text: #555555;
-      --bg-light: #f4f4f4;
+      --bg-page: #f4f5f7;
+      --bg-light: #ffffff;
       --white: #ffffff;
       --whatsapp-color: #25d366;
     }
@@ -31,7 +32,8 @@
     body {
       color: var(--dark-text);
       line-height: 1.6;
-      background-color: var(--white);
+      background-color: var(--bg-page);
+      overflow-x: hidden;
     }
 
     /* HEADER */
@@ -40,7 +42,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0.6rem 1.5rem;
+      padding: 0.6rem 1rem;
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -51,9 +53,9 @@
     .logo-container {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 0.8rem;
       font-weight: 800;
-      font-size: 1.25rem;
+      font-size: 1rem;
       color: var(--white);
       text-transform: uppercase;
       letter-spacing: 0.5px;
@@ -61,42 +63,43 @@
       cursor: pointer;
     }
     .logo-container img {
-      height: 75px;
-      width: 75px;
+      height: 55px;
+      width: 55px;
       border-radius: 50%;
       object-fit: cover;
-      border: 3px solid var(--accent-color);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+      border: 2px solid var(--accent-color);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.4);
     }
 
     .nav-links {
       display: flex;
-      gap: 1.5rem;
+      gap: 1.2rem;
       list-style: none;
     }
     .nav-links a {
       color: var(--white);
       text-decoration: none;
       font-weight: 600;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       transition: color 0.2s;
     }
     .nav-links a:hover {
       color: var(--accent-color);
     }
 
-    /* HERO SECTION (PORTADA MEJORADA) */
+    /* HERO SECTION CON CARRUSEL VISIBLE */
     .hero {
       position: relative;
       color: var(--white);
       text-align: center;
-      padding: 5rem 1.2rem 6rem 1.2rem;
+      padding: 4rem 1rem 5rem 1rem;
       min-height: 85vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       overflow: hidden;
+      /* Eliminamos el fondo sólido para que se vea el carrusel */
     }
 
     .hero-carousel {
@@ -128,46 +131,47 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.65);
+      background: rgba(0, 0, 0, 0.65); /* Capa oscura para que el texto resalte sobre la foto */
       z-index: -1;
     }
 
     .hero h1 {
-      font-size: 2.1rem;
+      font-size: 1.8rem;
       font-weight: 800;
       text-transform: uppercase;
-      margin-bottom: 1.2rem;
-      max-width: 750px;
-      text-shadow: 0 2px 5px rgba(0,0,0,0.8);
+      margin-bottom: 1rem;
+      max-width: 700px;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.9);
     }
 
-    /* Subtítulo estructurado con iconos */
     .hero-sub {
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
       margin-bottom: 2rem;
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-weight: 500;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+      text-shadow: 0 1px 3px rgba(0,0,0,0.9);
+      padding: 0 0.5rem;
     }
     .hero-sub div {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 0.5rem;
+      gap: 0.4rem;
+      text-align: center;
     }
 
     .carousel-dots {
       position: absolute;
-      bottom: 20px;
+      bottom: 15px;
       display: flex;
-      gap: 12px;
+      gap: 10px;
       z-index: 10;
     }
     .dot {
-      width: 14px;
-      height: 14px;
+      width: 12px;
+      height: 12px;
       border-radius: 50%;
       background-color: rgba(255, 255, 255, 0.4);
       border: 2px solid rgba(0,0,0,0.3);
@@ -184,7 +188,7 @@
       flex-direction: column;
       gap: 0.8rem;
       width: 100%;
-      max-width: 320px;
+      max-width: 300px;
     }
     .btn-cta {
       display: flex;
@@ -195,9 +199,9 @@
       color: var(--dark-text);
       text-decoration: none;
       font-weight: 800;
-      padding: 0.9rem 1.2rem;
+      padding: 0.85rem 1rem;
       border-radius: 4px;
-      font-size: 1.05rem;
+      font-size: 1rem;
       box-shadow: 0 4px 6px rgba(0,0,0,0.3);
       transition: transform 0.2s, background-color 0.2s;
     }
@@ -207,11 +211,11 @@
     }
 
     section {
-      padding: 3.5rem 1.5rem;
+      padding: 3rem 1rem;
       text-align: center;
     }
     .section-title {
-      font-size: 1.7rem;
+      font-size: 1.5rem;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.5px;
@@ -228,8 +232,8 @@
     /* GALERÍA / TARJETAS DE TRABAJOS */
     .portfolio-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
       max-width: 1100px;
       margin: 0 auto;
       text-align: left;
@@ -238,31 +242,27 @@
       background: var(--white);
       border-radius: 10px;
       overflow: hidden;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.06);
       border-top: 4px solid var(--accent-color);
       transition: transform 0.3s, box-shadow 0.3s;
     }
-    .portfolio-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-    }
     .portfolio-card img {
       width: 100%;
-      height: 220px;
+      height: 200px;
       object-fit: cover;
     }
     .portfolio-content {
-      padding: 1.5rem;
+      padding: 1.2rem;
     }
     .portfolio-content h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+      margin-bottom: 0.4rem;
       color: var(--dark-text);
     }
     .portfolio-content p {
       color: var(--gray-text);
-      font-size: 0.95rem;
-      line-height: 1.5;
+      font-size: 0.9rem;
+      line-height: 1.4;
     }
 
     /* CONTACTO & MAPA */
@@ -270,6 +270,10 @@
       max-width: 600px;
       margin: 0 auto;
       text-align: left;
+      background: var(--white);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     }
     .contact-form {
       display: flex;
@@ -286,8 +290,8 @@
     .form-group input, .form-group textarea {
       width: 100%;
       padding: 0.75rem;
-      border: 1px solid #999;
-      border-radius: 2px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
       font-size: 1rem;
     }
     .btn-submit {
@@ -296,12 +300,10 @@
       border: none;
       padding: 0.8rem 2rem;
       font-weight: 700;
+      border-radius: 4px;
       cursor: pointer;
       align-self: flex-end;
       transition: background-color 0.2s;
-    }
-    .btn-submit:hover {
-      background-color: var(--primary-hover);
     }
 
     .map-container {
@@ -311,7 +313,7 @@
       margin: 0 auto 2rem auto;
       border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     }
     .map-container iframe {
       width: 100%;
@@ -327,25 +329,25 @@
       background-color: var(--whatsapp-color);
       color: var(--white);
       border-radius: 50%;
-      width: 55px;
-      height: 55px;
+      width: 50px;
+      height: 50px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       text-decoration: none;
       box-shadow: 0 4px 10px rgba(0,0,0,0.3);
       z-index: 1000;
     }
     .floating-top {
       position: fixed;
-      bottom: 85px;
-      right: 25px;
+      bottom: 78px;
+      right: 23px;
       background-color: rgba(30, 30, 30, 0.85);
       color: var(--white);
       border-radius: 50%;
-      width: 44px;
-      height: 44px;
+      width: 40px;
+      height: 40px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -357,9 +359,32 @@
       border-top: 4px solid var(--accent-color);
       background-color: var(--primary-color);
       color: var(--white);
-      padding: 2rem 1.5rem;
+      padding: 2rem 1rem;
       text-align: center;
       font-size: 0.85rem;
+    }
+
+    /* RESPONSIVE MÓVIL */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .logo-container span {
+        font-size: 0.85rem;
+      }
+      .logo-container img {
+        height: 45px;
+        width: 45px;
+      }
+      .hero h1 {
+        font-size: 1.35rem;
+      }
+      .hero-sub {
+        font-size: 0.85rem;
+      }
+      section {
+        padding: 2.5rem 1rem;
+      }
     }
   </style>
 </head>
@@ -379,7 +404,7 @@
     </ul>
   </header>
 
-  <!-- HERO SECTION CON LA ESTRUCTURA MEJORADA -->
+  <!-- HERO SECTION CON CARRUSEL -->
   <section class="hero">
     <div class="hero-carousel">
       <div class="carousel-slide active" style="background-image: url('img/panderetas1.jpeg');"></div>
@@ -412,7 +437,7 @@
     </div>
   </section>
 
-  <!-- SECCIÓN DE TRABAJOS (8 TARJETAS) -->
+  <!-- SECCIÓN DE TRABAJOS -->
   <section id="servicios">
     <h2 class="section-title">Nuestros Trabajos y Diseños</h2>
     <div class="title-line"></div>
@@ -477,43 +502,43 @@
     </div>
   </section>
 
-  <!-- SOBRE NOSOTROS (DISEÑO MEJORADO) -->
-  <section id="nosotros" style="background-color: var(--bg-light); padding: 5rem 1.5rem;">
+  <!-- SOBRE NOSOTROS -->
+  <section id="nosotros">
     <h2 class="section-title">Sobre Nosotros</h2>
     <div class="title-line"></div>
     
-    <div style="max-width: 850px; margin: 0 auto; text-align: left; background: var(--white); padding: 2.5rem; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-left: 5px solid var(--accent-color);">
+    <div style="max-width: 850px; margin: 0 auto; text-align: left; background: var(--white); padding: 1.8rem; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-left: 5px solid var(--accent-color);">
       
-      <p style="color: var(--dark-text); font-size: 1.05rem; margin-bottom: 1.2rem; line-height: 1.7;">
+      <p style="color: var(--dark-text); font-size: 1rem; margin-bottom: 1.2rem; line-height: 1.7;">
         En <strong>JC Inversiones y Vibrados SpA</strong>, contamos con años de experiencia entregando soluciones sólidas, seguras y de alto nivel estético para proyectos particulares, parcelas y constructoras en toda la <strong>Región de Valparaíso</strong>.
       </p>
 
-      <p style="color: var(--dark-text); font-size: 1.05rem; margin-bottom: 1.5rem; line-height: 1.7;">
+      <p style="color: var(--dark-text); font-size: 1rem; margin-bottom: 1.5rem; line-height: 1.7;">
         Nos especializamos en la fabricación, venta e instalación de <strong>cierres perimetrales y panderetas de hormigón</strong> de máxima durabilidad, ofreciendo desde modelos tradicionales hasta modernos diseños con efecto madera que combinan a la perfección resistencia y elegancia.
       </p>
 
-      <p style="color: var(--gray-text); font-size: 1rem; margin-bottom: 1rem; font-weight: 600;">
+      <p style="color: var(--gray-text); font-size: 0.95rem; margin-bottom: 1rem; font-weight: 600;">
         Además de nuestros prefabricados, nos distinguimos por brindar una oferta integral para la construcción y el desarrollo de terrenos, que incluye:
       </p>
 
       <ul style="list-style: none; padding-left: 0; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.8rem;">
-        <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--dark-text); font-size: 0.98rem;">
+        <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--dark-text); font-size: 0.95rem;">
           <i class="bi bi-check-circle-fill" style="color: var(--accent-color); font-size: 1.1rem; margin-top: 2px;"></i>
           <div><strong>Venta de materiales de primera calidad:</strong> Bloques de hormigón, pastelones tradicionales y especiales para piscina, arena por saco y gravilla.</div>
         </li>
-        <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--dark-text); font-size: 0.98rem;">
+        <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--dark-text); font-size: 0.95rem;">
           <i class="bi bi-check-circle-fill" style="color: var(--accent-color); font-size: 1.1rem; margin-top: 2px;"></i>
           <div><strong>Servicios especializados:</strong> Ejecución de pozos profundos y transporte de carga confiable y seguro.</div>
         </li>
       </ul>
 
-      <p style="color: var(--dark-text); font-size: 1rem; line-height: 1.6; border-top: 1px solid #eee; padding-top: 1.2rem; font-style: italic;">
+      <p style="color: var(--dark-text); font-size: 0.95rem; line-height: 1.6; border-top: 1px solid #eee; padding-top: 1.2rem; font-style: italic;">
         Trabajamos con un fuerte compromiso hacia nuestros clientes, garantizando calidad en cada producto, cumplimiento en los plazos y un trabajo 100% garantizado en terreno.
       </p>
 
     </div>
 
-    <div class="cta-container" style="margin: 2.5rem auto 0 auto;">
+    <div class="cta-container" style="margin: 2rem auto 0 auto;">
       <a href="https://wa.me/56978851498" class="btn-cta" target="_blank">
         <i class="bi bi-whatsapp"></i> Escríbenos a WhatsApp
       </a>
@@ -558,6 +583,7 @@
     <p>© 2026 JC Inversiones y Vibrados Spa - Limache.</p>
   </footer>
 
+  <!-- SCRIPT DEL CARRUSEL -->
   <script>
     const slides = document.querySelectorAll('.carousel-slide');
     const dots = document.querySelectorAll('.dot');
