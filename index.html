@@ -63,8 +63,8 @@
       cursor: pointer;
     }
     .logo-container img {
-      height: 48px;
-      width: 48px;
+      height: 45px;
+      width: 45px;
       border-radius: 50%;
       object-fit: cover;
       border: 2px solid var(--accent-color);
@@ -87,19 +87,18 @@
       color: var(--accent-color);
     }
 
-    /* HERO SECTION (OPTIMIZADA PARA MÓVIL) */
+    /* HERO SECTION (CARRUSEL Y VISIBILIDAD MÓVIL PERFECTA) */
     .hero {
       position: relative;
       color: var(--white);
       text-align: center;
-      padding: 2.5rem 1rem 3.5rem 1rem; /* Padding más compacto arriba y abajo */
-      min-height: auto; /* Permite que se adapte exactamente al contenido sin forzar espacio extra */
+      padding: 3rem 1rem 4rem 1rem;
+      min-height: 85vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       overflow: hidden;
-      background-color: var(--primary-color);
     }
 
     .hero-carousel {
@@ -136,10 +135,10 @@
     }
 
     .hero h1 {
-      font-size: 1.4rem;
+      font-size: 1.35rem;
       font-weight: 800;
       text-transform: uppercase;
-      margin-bottom: 0.8rem;
+      margin-bottom: 0.6rem;
       max-width: 700px;
       text-shadow: 0 2px 5px rgba(0,0,0,0.8);
     }
@@ -148,8 +147,8 @@
       display: flex;
       flex-direction: column;
       gap: 0.4rem;
-      margin-bottom: 1.5rem;
-      font-size: 0.9rem;
+      margin-bottom: 1.2rem;
+      font-size: 0.85rem;
       font-weight: 500;
       text-shadow: 0 1px 3px rgba(0,0,0,0.8);
       padding: 0 0.5rem;
@@ -162,33 +161,14 @@
       text-align: center;
     }
 
-    .carousel-dots {
-      position: relative; /* Cambiado a relative para que no flote encima de los botones */
-      margin-top: 1rem;
-      display: flex;
-      gap: 8px;
-      z-index: 10;
-    }
-    .dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background-color: rgba(255, 255, 255, 0.4);
-      border: 2px solid rgba(0,0,0,0.3);
-      cursor: pointer;
-      transition: background-color 0.3s, transform 0.3s;
-    }
-    .dot.active {
-      background-color: var(--accent-color);
-      transform: scale(1.3);
-    }
-
+    /* BOTONES ARRIBA EN EL HERO PARA QUE SE VEAN SIEMPRE */
     .cta-container {
       display: flex;
       flex-direction: column;
       gap: 0.6rem;
       width: 100%;
       max-width: 280px;
+      margin-bottom: 1.2rem;
     }
     .btn-cta {
       display: flex;
@@ -208,6 +188,26 @@
     .btn-cta:hover {
       transform: translateY(-2px);
       background-color: #e0b412;
+    }
+
+    /* PUNTOS DEL CARRUSEL ABAJO DE LOS BOTONES */
+    .carousel-dots {
+      display: flex;
+      gap: 8px;
+      z-index: 10;
+    }
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.4);
+      border: 2px solid rgba(0,0,0,0.3);
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+    .dot.active {
+      background-color: var(--accent-color);
+      transform: scale(1.3);
     }
 
     section {
@@ -377,10 +377,10 @@
         width: 40px;
       }
       .hero h1 {
-        font-size: 1.25rem;
+        font-size: 1.15rem;
       }
       .hero-sub {
-        font-size: 0.8rem;
+        font-size: 0.78rem;
       }
     }
   </style>
@@ -401,7 +401,7 @@
     </ul>
   </header>
 
-  <!-- HERO SECTION -->
+  <!-- HERO SECTION CON CARRUSEL Y BOTONES VISIBLES -->
   <section class="hero">
     <div class="hero-carousel">
       <div class="carousel-slide active" style="background-image: url('img/panderetas1.jpeg');"></div>
@@ -413,8 +413,8 @@
     <h1>Fabricación e Instalación de Vibrados y Cierres Perimetrales</h1>
     
     <div class="hero-sub">
-      <div><i class="bi bi-geo-alt-fill" style="color: var(--accent-color);"></i> Ubicados en Limache (Al costado del Cementerio) — Atendemos en toda la Región de Valparaíso.</div>
-      <div><i class="bi bi-tools" style="color: var(--accent-color);"></i> Pozos Profundos, Transporte de Carga y Venta de Materiales de Construcción.</div>
+      <div><i class="bi bi-geo-alt-fill" style="color: var(--accent-color);"></i> Ubicados en Limache (Al costado del Cementerio) — Valparaíso.</div>
+      <div><i class="bi bi-tools" style="color: var(--accent-color);"></i> Pozos Profundos, Transporte y Materiales de Construcción.</div>
     </div>
     
     <div class="cta-container">
@@ -535,7 +535,7 @@
 
     </div>
 
-    <div class="cta-container" style="margin: 2rem auto 0 auto;">
+    <div class="cta-container" style="margin: 2rem auto 0 auto; max-width: 320px;">
       <a href="https://wa.me/56978851498" class="btn-cta" target="_blank">
         <i class="bi bi-whatsapp"></i> Escríbenos a WhatsApp
       </a>
