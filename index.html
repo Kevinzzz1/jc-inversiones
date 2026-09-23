@@ -85,7 +85,7 @@
       color: var(--accent-color);
     }
 
-    /* HERO SECTION */
+    /* HERO SECTION (PORTADA MEJORADA) */
     .hero {
       position: relative;
       color: var(--white);
@@ -133,19 +133,29 @@
     }
 
     .hero h1 {
-      font-size: 2rem;
+      font-size: 2.1rem;
       font-weight: 800;
       text-transform: uppercase;
-      margin-bottom: 1rem;
-      max-width: 700px;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+      margin-bottom: 1.2rem;
+      max-width: 750px;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.8);
     }
-    .hero p {
-      font-size: 1.15rem;
+
+    /* Subtítulo estructurado con iconos */
+    .hero-sub {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
       margin-bottom: 2rem;
-      max-width: 550px;
+      font-size: 1.1rem;
       font-weight: 500;
       text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+    }
+    .hero-sub div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
     }
 
     .carousel-dots {
@@ -253,14 +263,6 @@
       color: var(--gray-text);
       font-size: 0.95rem;
       line-height: 1.5;
-    }
-
-    /* SOBRE NOSOTROS */
-    .about-container {
-      max-width: 700px;
-      margin: 0 auto;
-      color: var(--gray-text);
-      font-size: 1.05rem;
     }
 
     /* CONTACTO & MAPA */
@@ -377,7 +379,7 @@
     </ul>
   </header>
 
-  <!-- HERO SECTION CON CARRUSEL DE LAS MEJORES FOTOS -->
+  <!-- HERO SECTION CON LA ESTRUCTURA MEJORADA -->
   <section class="hero">
     <div class="hero-carousel">
       <div class="carousel-slide active" style="background-image: url('img/panderetas1.jpeg');"></div>
@@ -387,7 +389,11 @@
     </div>
 
     <h1>Fabricación e Instalación de Vibrados y Cierres Perimetrales</h1>
-    <p>📍 Limache (Al costado del Cementerio), Pozos Profundos, Transporte y Venta de Materiales.</p>
+    
+    <div class="hero-sub">
+      <div><i class="bi bi-geo-alt-fill" style="color: var(--accent-color);"></i> Ubicados en Limache (Al costado del Cementerio) — Atendemos en toda la Región de Valparaíso.</div>
+      <div><i class="bi bi-tools" style="color: var(--accent-color);"></i> Pozos Profundos, Transporte de Carga y Venta de Materiales de Construcción.</div>
+    </div>
     
     <div class="cta-container">
       <a href="https://wa.me/56978851498" class="btn-cta" target="_blank">
@@ -406,13 +412,12 @@
     </div>
   </section>
 
-  <!-- SECCIÓN DE TRABAJOS (LAS 8 TARJETAS CON SUS FOTOS Y DESCRIPCIONES) -->
+  <!-- SECCIÓN DE TRABAJOS (8 TARJETAS) -->
   <section id="servicios">
     <h2 class="section-title">Nuestros Trabajos y Diseños</h2>
     <div class="title-line"></div>
     
     <div class="portfolio-grid">
-      <!-- Tarjeta 1 -->
       <div class="portfolio-card">
         <img src="img/panderetas1.jpeg" alt="Pandereta 1">
         <div class="portfolio-content">
@@ -420,8 +425,6 @@
           <p>Diseño premium de placas de hormigón vibrado que simulan la textura y calidez de la madera natural, brindando máxima elegancia y privacidad.</p>
         </div>
       </div>
-
-      <!-- Tarjeta 2 -->
       <div class="portfolio-card">
         <img src="img/panderetas2.jpeg" alt="Pandereta 2">
         <div class="portfolio-content">
@@ -429,8 +432,6 @@
           <p>Instalación profesional combinando placas lisas con diseño superior ornamentado de celosías, ideal para dejar pasar ventilación y luz.</p>
         </div>
       </div>
-
-      <!-- Tarjeta 3 -->
       <div class="portfolio-card">
         <img src="img/panderetas3.jpeg" alt="Pandereta 3">
         <div class="portfolio-content">
@@ -438,8 +439,6 @@
           <p>Paneles con relieves lineales reforzados diseñados para aportar un toque estético moderno y mayor resistencia estructural en perímetros.</p>
         </div>
       </div>
-
-      <!-- Tarjeta 4 -->
       <div class="portfolio-card">
         <img src="img/panderetas4.jpeg" alt="Pandereta 4">
         <div class="portfolio-content">
@@ -447,8 +446,6 @@
           <p>Estructura robusta de hormigón instalada en terrenos complejos, asegurando estabilidad y protección duradera para parcelas.</p>
         </div>
       </div>
-
-      <!-- Tarjeta 5 -->
       <div class="portfolio-card">
         <img src="img/panderetas5.jpeg" alt="Pandereta 5">
         <div class="portfolio-content">
@@ -456,8 +453,6 @@
           <p>Trabajos detallados de nivelación y montaje de placas para una separación limpia y segura entre propiedades vecinas.</p>
         </div>
       </div>
-
-      <!-- Tarjeta 6 -->
       <div class="portfolio-card">
         <img src="img/panderetas6.jpeg" alt="Pandereta 6">
         <div class="portfolio-content">
@@ -465,8 +460,6 @@
           <p>Variedad en texturas de hormigón de alta densidad preparadas para soportar condiciones climáticas exigentes sin perder estética.</p>
         </div>
       </div>
-
-      <!-- Tarjeta 7 -->
       <div class="portfolio-card">
         <img src="img/panderetas7.jpeg" alt="Pandereta 7">
         <div class="portfolio-content">
@@ -474,13 +467,11 @@
           <p>Producción propia de postes rectos y ranurados de alta resistencia reforzados con acero para garantizar una base firme.</p>
         </div>
       </div>
-
-      <!-- Tarjeta 8 -->
       <div class="portfolio-card">
         <img src="img/panderetas8.jpeg" alt="Pandereta 8">
         <div class="portfolio-content">
           <h3>Cierres Residenciales Completos</h3>
-          <p>Soluciones integrales de cerkos y panderetas ejecutadas con rapidez y precisión para proyectos habitacionales y comerciales.</p>
+          <p>Soluciones integrales de cercos y panderetas ejecutadas con rapidez y precisión para proyectos habitacionales y comerciales.</p>
         </div>
       </div>
     </div>
