@@ -71,6 +71,7 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.4);
     }
 
+    /* MENÚ DE NAVEGACIÓN ESCRITORIO */
     .nav-links {
       display: flex;
       gap: 1.2rem;
@@ -87,7 +88,49 @@
       color: var(--accent-color);
     }
 
-    /* HERO SECTION (CARRUSEL Y VISIBILIDAD MÓVIL PERFECTA) */
+    /* BOTÓN MENÚ HAMBURGUESA (MÓVIL) */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--white);
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
+    /* MENÚ DESPLEGABLE MÓVIL */
+    .mobile-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: var(--primary-color);
+      flex-direction: column;
+      list-style: none;
+      border-bottom: 3px solid var(--accent-color);
+      box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    }
+    .mobile-menu.active {
+      display: flex;
+    }
+    .mobile-menu li {
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .mobile-menu a {
+      display: block;
+      padding: 1rem;
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 600;
+      text-align: center;
+    }
+    .mobile-menu a:hover {
+      background-color: rgba(245, 197, 24, 0.2);
+      color: var(--accent-color);
+    }
+
+    /* HERO SECTION */
     .hero {
       position: relative;
       color: var(--white);
@@ -161,7 +204,6 @@
       text-align: center;
     }
 
-    /* BOTONES ARRIBA EN EL HERO PARA QUE SE VEAN SIEMPRE */
     .cta-container {
       display: flex;
       flex-direction: column;
@@ -190,7 +232,6 @@
       background-color: #e0b412;
     }
 
-    /* PUNTOS DEL CARRUSEL ABAJO DE LOS BOTONES */
     .carousel-dots {
       display: flex;
       gap: 8px;
@@ -364,17 +405,20 @@
       font-size: 0.85rem;
     }
 
-    /* MEDIA QUERY PARA CELULARES */
+    /* MEDIA QUERY PARA ACTIVAR EL MENÚ HAMBURGUESA EN MÓVIL */
     @media (max-width: 768px) {
       .nav-links {
-        display: none;
+        display: none; /* Oculta el menú fijo de computadora */
+      }
+      .menu-toggle {
+        display: block; /* Muestra el botón de hamburguesa en celular */
       }
       .logo-container span {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
       }
       .logo-container img {
-        height: 40px;
-        width: 40px;
+        height: 38px;
+        width: 38px;
       }
       .hero h1 {
         font-size: 1.15rem;
@@ -393,15 +437,29 @@
       <span>JC Inversiones y Vibrados</span>
     </a>
     
+    <!-- Menú normal para computadoras -->
     <ul class="nav-links">
       <li><a href="#inicio">Inicio</a></li>
       <li><a href="#servicios">Trabajos</a></li>
       <li><a href="#nosotros">Nosotros</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
+
+    <!-- Botón de Menú Hamburguesa para celulares -->
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menú">
+      <i class="bi bi-list"></i>
+    </button>
+
+    <!-- Lista desplegable móvil -->
+    <ul class="mobile-menu" id="mobileMenu">
+      <li><a href="#inicio" onclick="toggleMenu()">Inicio</a></li>
+      <li><a href="#servicios" onclick="toggleMenu()">Trabajos</a></li>
+      <li><a href="#nosotros" onclick="toggleMenu()">Nosotros</a></li>
+      <li><a href="#contacto" onclick="toggleMenu()">Contacto</a></li>
+    </ul>
   </header>
 
-  <!-- HERO SECTION CON CARRUSEL Y BOTONES VISIBLES -->
+  <!-- HERO SECTION -->
   <section class="hero">
     <div class="hero-carousel">
       <div class="carousel-slide active" style="background-image: url('img/panderetas1.jpeg');"></div>
@@ -581,6 +639,13 @@
   </footer>
 
   <script>
+    // Script para el menú hamburguesa móvil
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('active');
+    }
+
+    // Script para el carrusel de fotos
     const slides = document.querySelectorAll('.carousel-slide');
     const dots = document.querySelectorAll('.dot');
     let currentIndex = 0;
