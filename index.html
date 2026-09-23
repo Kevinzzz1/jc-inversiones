@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JC Inversiones y Vibrados Spa | Limache</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <style>
+    :root {
+      --primary-color: #1a1a1a;
+      --primary-hover: #333333;
+      --accent-color: #f5c518;
+      --dark-text: #1a1a1a;
+      --gray-text: #555555;
+      --bg-light: #f4f4f4;
+      --white: #ffffff;
+      --whatsapp-color: #25d366;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      color: var(--dark-text);
+      line-height: 1.6;
+      background-color: var(--white);
+    }
+
+    /* HEADER */
+    header {
+      background-color: var(--primary-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.6rem 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+      border-bottom: 3px solid var(--accent-color);
+    }
+    
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-weight: 800;
+      font-size: 1.25rem;
+      color: var(--white);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .logo-container img {
+      height: 75px;
+      width: 75px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--accent-color);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: var(--accent-color);
+    }
+
+    /* HERO SECTION */
+    .hero {
+      position: relative;
+      color: var(--white);
+      text-align: center;
+      padding: 5rem 1.2rem 6rem 1.2rem;
+      min-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero-carousel {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+    }
+    .carousel-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 1.2s ease-in-out;
+    }
+    .carousel-slide.active {
+      opacity: 1;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.65);
+      z-index: -1;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      max-width: 700px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+    }
+    .hero p {
+      font-size: 1.15rem;
+      margin-bottom: 2rem;
+      max-width: 550px;
+      font-weight: 500;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+    }
+
+    .carousel-dots {
+      position: absolute;
+      bottom: 20px;
+      display: flex;
+      gap: 12px;
+      z-index: 10;
+    }
+    .dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.4);
+      border: 2px solid rgba(0,0,0,0.3);
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+    .dot.active {
+      background-color: var(--accent-color);
+      transform: scale(1.3);
+    }
+
+    .cta-container {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      width: 100%;
+      max-width: 320px;
+    }
+    .btn-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background-color: var(--accent-color);
+      color: var(--dark-text);
+      text-decoration: none;
+      font-weight: 800;
+      padding: 0.9rem 1.2rem;
+      border-radius: 4px;
+      font-size: 1.05rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+      transition: transform 0.2s, background-color 0.2s;
+    }
+    .btn-cta:hover {
+      transform: translateY(-2px);
+      background-color: #e0b412;
+    }
+
+    section {
+      padding: 3.5rem 1.5rem;
+      text-align: center;
+    }
+    .section-title {
+      font-size: 1.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.5rem;
+    }
+    .title-line {
+      width: 60px;
+      height: 4px;
+      background-color: var(--accent-color);
+      margin: 0 auto 2rem auto;
+      border-radius: 2px;
+    }
+
+    /* GALERÍA / TARJETAS DE TRABAJOS */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .portfolio-card {
+      background: var(--white);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      border-top: 4px solid var(--accent-color);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .portfolio-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+    .portfolio-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .portfolio-content {
+      padding: 1.5rem;
+    }
+    .portfolio-content h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: var(--dark-text);
+    }
+    .portfolio-content p {
+      color: var(--gray-text);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    /* SOBRE NOSOTROS */
+    .about-container {
+      max-width: 700px;
+      margin: 0 auto;
+      color: var(--gray-text);
+      font-size: 1.05rem;
+    }
+
+    /* CONTACTO & MAPA */
+    .contact-container {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.9rem;
+      font-style: italic;
+      margin-bottom: 0.3rem;
+    }
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #999;
+      border-radius: 2px;
+      font-size: 1rem;
+    }
+    .btn-submit {
+      background-color: var(--primary-color);
+      color: var(--white);
+      border: none;
+      padding: 0.8rem 2rem;
+      font-weight: 700;
+      cursor: pointer;
+      align-self: flex-end;
+      transition: background-color 0.2s;
+    }
+    .btn-submit:hover {
+      background-color: var(--primary-hover);
+    }
+
+    .map-container {
+      width: 100%;
+      max-width: 700px;
+      height: 220px;
+      margin: 0 auto 2rem auto;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* BOTONES FLOTANTES */
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: var(--whatsapp-color);
+      color: var(--white);
+      border-radius: 50%;
+      width: 55px;
+      height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
+    .floating-top {
+      position: fixed;
+      bottom: 85px;
+      right: 25px;
+      background-color: rgba(30, 30, 30, 0.85);
+      color: var(--white);
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      z-index: 1000;
+    }
+
+    footer {
+      border-top: 4px solid var(--accent-color);
+      background-color: var(--primary-color);
+      color: var(--white);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body id="inicio">
+
+  <header>
+    <a href="#inicio" class="logo-container">
+      <img src="img/logo.jpg" alt="JC Inversiones Logo">
+      <span>JC Inversiones y Vibrados</span>
+    </a>
+    
+    <ul class="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#servicios">Trabajos</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </header>
+
+  <!-- HERO SECTION CON CARRUSEL DE LAS MEJORES FOTOS -->
+  <section class="hero">
+    <div class="hero-carousel">
+      <div class="carousel-slide active" style="background-image: url('img/panderetas1.jpeg');"></div>
+      <div class="carousel-slide" style="background-image: url('img/panderetas3.jpeg');"></div>
+      <div class="carousel-slide" style="background-image: url('img/panderetas9.jpeg');"></div>
+      <div class="carousel-slide" style="background-image: url('img/panderetas10.jpeg');"></div>
+    </div>
+
+    <h1>Fabricación e Instalación de Vibrados y Cierres Perimetrales</h1>
+    <p>📍 Limache (Al costado del Cementerio), Pozos Profundos, Transporte y Venta de Materiales.</p>
+    
+    <div class="cta-container">
+      <a href="https://wa.me/56978851498" class="btn-cta" target="_blank">
+        <i class="bi bi-whatsapp"></i> Cotiza Aquí
+      </a>
+      <a href="tel:+56978851498" class="btn-cta">
+        <i class="bi bi-telephone-fill"></i> +56 9 7885 1498
+      </a>
+    </div>
+
+    <div class="carousel-dots">
+      <button class="dot active" onclick="goToSlide(0)"></button>
+      <button class="dot" onclick="goToSlide(1)"></button>
+      <button class="dot" onclick="goToSlide(2)"></button>
+      <button class="dot" onclick="goToSlide(3)"></button>
+    </div>
+  </section>
+
+  <!-- SECCIÓN DE TRABAJOS (LAS 8 TARJETAS CON SUS FOTOS Y DESCRIPCIONES) -->
+  <section id="servicios">
+    <h2 class="section-title">Nuestros Trabajos y Diseños</h2>
+    <div class="title-line"></div>
+    
+    <div class="portfolio-grid">
+      <!-- Tarjeta 1 -->
+      <div class="portfolio-card">
+        <img src="img/panderetas1.jpeg" alt="Pandereta 1">
+        <div class="portfolio-content">
+          <h3>Cierre Estilo Madera</h3>
+          <p>Diseño premium de placas de hormigón vibrado que simulan la textura y calidez de la madera natural, brindando máxima elegancia y privacidad.</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta 2 -->
+      <div class="portfolio-card">
+        <img src="img/panderetas2.jpeg" alt="Pandereta 2">
+        <div class="portfolio-content">
+          <h3>Cierre Perimetral con Celosía</h3>
+          <p>Instalación profesional combinando placas lisas con diseño superior ornamentado de celosías, ideal para dejar pasar ventilación y luz.</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta 3 -->
+      <div class="portfolio-card">
+        <img src="img/panderetas3.jpeg" alt="Pandereta 3">
+        <div class="portfolio-content">
+          <h3>Pandereta Ornamentada Lineal</h3>
+          <p>Paneles con relieves lineales reforzados diseñados para aportar un toque estético moderno y mayor resistencia estructural en perímetros.</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta 4 -->
+      <div class="portfolio-card">
+        <img src="img/panderetas4.jpeg" alt="Pandereta 4">
+        <div class="portfolio-content">
+          <h3>Delimitación Firme y Sólida</h3>
+          <p>Estructura robusta de hormigón instalada en terrenos complejos, asegurando estabilidad y protección duradera para parcelas.</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta 5 -->
+      <div class="portfolio-card">
+        <img src="img/panderetas5.jpeg" alt="Pandereta 5">
+        <div class="portfolio-content">
+          <h3>Instalación en Linderos</h3>
+          <p>Trabajos detallados de nivelación y montaje de placas para una separación limpia y segura entre propiedades vecinas.</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta 6 -->
+      <div class="portfolio-card">
+        <img src="img/panderetas6.jpeg" alt="Pandereta 6">
+        <div class="portfolio-content">
+          <h3>Paneles Texturizados</h3>
+          <p>Variedad en texturas de hormigón de alta densidad preparadas para soportar condiciones climáticas exigentes sin perder estética.</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta 7 -->
+      <div class="portfolio-card">
+        <img src="img/panderetas7.jpeg" alt="Pandereta 7">
+        <div class="portfolio-content">
+          <h3>Fabricación de Postes y Canales</h3>
+          <p>Producción propia de postes rectos y ranurados de alta resistencia reforzados con acero para garantizar una base firme.</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta 8 -->
+      <div class="portfolio-card">
+        <img src="img/panderetas8.jpeg" alt="Pandereta 8">
+        <div class="portfolio-content">
+          <h3>Cierres Residenciales Completos</h3>
+          <p>Soluciones integrales de cerkos y panderetas ejecutadas con rapidez y precisión para proyectos habitacionales y comerciales.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE NOSOTROS (DISEÑO MEJORADO) -->
+  <section id="nosotros" style="background-color: var(--bg-light); padding: 5rem 1.5rem;">
+    <h2 class="section-title">Sobre Nosotros</h2>
+    <div class="title-line"></div>
+    
+    <div style="max-width: 850px; margin: 0 auto; text-align: left; background: var(--white); padding: 2.5rem; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-left: 5px solid var(--accent-color);">
+      
+      <p style="color: var(--dark-text); font-size: 1.05rem; margin-bottom: 1.2rem; line-height: 1.7;">
+        En <strong>JC Inversiones y Vibrados SpA</strong>, contamos con años de experiencia entregando soluciones sólidas, seguras y de alto nivel estético para proyectos particulares, parcelas y constructoras en toda la <strong>Región de Valparaíso</strong>.
+      </p>
+
+      <p style="color: var(--dark-text); font-size: 1.05rem; margin-bottom: 1.5rem; line-height: 1.7;">
+        Nos especializamos en la fabricación, venta e instalación de <strong>cierres perimetrales y panderetas de hormigón</strong> de máxima durabilidad, ofreciendo desde modelos tradicionales hasta modernos diseños con efecto madera que combinan a la perfección resistencia y elegancia.
+      </p>
+
+      <p style="color: var(--gray-text); font-size: 1rem; margin-bottom: 1rem; font-weight: 600;">
+        Además de nuestros prefabricados, nos distinguimos por brindar una oferta integral para la construcción y el desarrollo de terrenos, que incluye:
+      </p>
+
+      <ul style="list-style: none; padding-left: 0; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.8rem;">
+        <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--dark-text); font-size: 0.98rem;">
+          <i class="bi bi-check-circle-fill" style="color: var(--accent-color); font-size: 1.1rem; margin-top: 2px;"></i>
+          <div><strong>Venta de materiales de primera calidad:</strong> Bloques de hormigón, pastelones tradicionales y especiales para piscina, arena por saco y gravilla.</div>
+        </li>
+        <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--dark-text); font-size: 0.98rem;">
+          <i class="bi bi-check-circle-fill" style="color: var(--accent-color); font-size: 1.1rem; margin-top: 2px;"></i>
+          <div><strong>Servicios especializados:</strong> Ejecución de pozos profundos y transporte de carga confiable y seguro.</div>
+        </li>
+      </ul>
+
+      <p style="color: var(--dark-text); font-size: 1rem; line-height: 1.6; border-top: 1px solid #eee; padding-top: 1.2rem; font-style: italic;">
+        Trabajamos con un fuerte compromiso hacia nuestros clientes, garantizando calidad en cada producto, cumplimiento en los plazos y un trabajo 100% garantizado en terreno.
+      </p>
+
+    </div>
+
+    <div class="cta-container" style="margin: 2.5rem auto 0 auto;">
+      <a href="https://wa.me/56978851498" class="btn-cta" target="_blank">
+        <i class="bi bi-whatsapp"></i> Escríbenos a WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- CONTACTO & MAPA -->
+  <section id="contacto">
+    <h2 class="section-title">Contacto</h2>
+    <div class="title-line"></div>
+
+    <div class="map-container">
+      <iframe src="https://maps.google.com/maps?q=-33.0165809,-71.2726008&z=15&output=embed" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <div class="contact-container">
+      <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">Consúltanos</h3>
+      <p style="color: var(--gray-text);">Comunícate al <strong>+56 9 7885 1498</strong> o escríbenos a <strong>famasi.ventas@gmail.com</strong>, o completa el formulario a continuación:</p>
+      
+      <form class="contact-form">
+        <div class="form-group">
+          <label>Nombre</label>
+          <input type="text" required>
+        </div>
+        <div class="form-group">
+          <label>Teléfono</label>
+          <input type="tel" required>
+        </div>
+        <div class="form-group">
+          <label>Mensaje...</label>
+          <textarea rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <a href="#inicio" class="floating-top" aria-label="Subir"><i class="bi bi-chevron-up"></i></a>
+  <a href="https://wa.me/56978851498" class="floating-whatsapp" target="_blank" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+
+  <footer>
+    <p>© 2026 JC Inversiones y Vibrados Spa - Limache.</p>
+  </footer>
+
+  <script>
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.dot');
+    let currentIndex = 0;
+    let slideTimer;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        dots[i].classList.remove('active');
+      });
+      currentIndex = index;
+      slides[currentIndex].classList.add('active');
+      dots[currentIndex].classList.add('active');
+    }
+
+    function nextSlide() {
+      let nextIndex = (currentIndex + 1) % slides.length;
+      showSlide(nextIndex);
+    }
+
+    function goToSlide(index) {
+      showSlide(index);
+      resetTimer();
+    }
+
+    function resetTimer() {
+      clearInterval(slideTimer);
+      slideTimer = setInterval(nextSlide, 4000);
+    }
+
+    slideTimer = setInterval(nextSlide, 4000);
+  </script>
+</body>
+</html>
