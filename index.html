@@ -42,7 +42,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0.6rem 1rem;
+      padding: 0.5rem 1rem;
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -53,9 +53,9 @@
     .logo-container {
       display: flex;
       align-items: center;
-      gap: 0.8rem;
+      gap: 0.7rem;
       font-weight: 800;
-      font-size: 1rem;
+      font-size: 0.95rem;
       color: var(--white);
       text-transform: uppercase;
       letter-spacing: 0.5px;
@@ -63,8 +63,8 @@
       cursor: pointer;
     }
     .logo-container img {
-      height: 55px;
-      width: 55px;
+      height: 48px;
+      width: 48px;
       border-radius: 50%;
       object-fit: cover;
       border: 2px solid var(--accent-color);
@@ -87,19 +87,19 @@
       color: var(--accent-color);
     }
 
-    /* HERO SECTION CON CARRUSEL VISIBLE */
+    /* HERO SECTION (OPTIMIZADA PARA MÓVIL) */
     .hero {
       position: relative;
       color: var(--white);
       text-align: center;
-      padding: 4rem 1rem 5rem 1rem;
-      min-height: 85vh;
+      padding: 2.5rem 1rem 3.5rem 1rem; /* Padding más compacto arriba y abajo */
+      min-height: auto; /* Permite que se adapte exactamente al contenido sin forzar espacio extra */
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       overflow: hidden;
-      /* Eliminamos el fondo sólido para que se vea el carrusel */
+      background-color: var(--primary-color);
     }
 
     .hero-carousel {
@@ -131,27 +131,27 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.65); /* Capa oscura para que el texto resalte sobre la foto */
+      background: rgba(0, 0, 0, 0.7);
       z-index: -1;
     }
 
     .hero h1 {
-      font-size: 1.8rem;
+      font-size: 1.4rem;
       font-weight: 800;
       text-transform: uppercase;
-      margin-bottom: 1rem;
+      margin-bottom: 0.8rem;
       max-width: 700px;
-      text-shadow: 0 2px 5px rgba(0,0,0,0.9);
+      text-shadow: 0 2px 5px rgba(0,0,0,0.8);
     }
 
     .hero-sub {
       display: flex;
       flex-direction: column;
-      gap: 0.5rem;
-      margin-bottom: 2rem;
-      font-size: 1rem;
+      gap: 0.4rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.9rem;
       font-weight: 500;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.9);
+      text-shadow: 0 1px 3px rgba(0,0,0,0.8);
       padding: 0 0.5rem;
     }
     .hero-sub div {
@@ -163,15 +163,15 @@
     }
 
     .carousel-dots {
-      position: absolute;
-      bottom: 15px;
+      position: relative; /* Cambiado a relative para que no flote encima de los botones */
+      margin-top: 1rem;
       display: flex;
-      gap: 10px;
+      gap: 8px;
       z-index: 10;
     }
     .dot {
-      width: 12px;
-      height: 12px;
+      width: 10px;
+      height: 10px;
       border-radius: 50%;
       background-color: rgba(255, 255, 255, 0.4);
       border: 2px solid rgba(0,0,0,0.3);
@@ -186,9 +186,9 @@
     .cta-container {
       display: flex;
       flex-direction: column;
-      gap: 0.8rem;
+      gap: 0.6rem;
       width: 100%;
-      max-width: 300px;
+      max-width: 280px;
     }
     .btn-cta {
       display: flex;
@@ -199,9 +199,9 @@
       color: var(--dark-text);
       text-decoration: none;
       font-weight: 800;
-      padding: 0.85rem 1rem;
+      padding: 0.75rem 1rem;
       border-radius: 4px;
-      font-size: 1rem;
+      font-size: 0.95rem;
       box-shadow: 0 4px 6px rgba(0,0,0,0.3);
       transition: transform 0.2s, background-color 0.2s;
     }
@@ -364,26 +364,23 @@
       font-size: 0.85rem;
     }
 
-    /* RESPONSIVE MÓVIL */
+    /* MEDIA QUERY PARA CELULARES */
     @media (max-width: 768px) {
       .nav-links {
         display: none;
       }
       .logo-container span {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
       }
       .logo-container img {
-        height: 45px;
-        width: 45px;
+        height: 40px;
+        width: 40px;
       }
       .hero h1 {
-        font-size: 1.35rem;
+        font-size: 1.25rem;
       }
       .hero-sub {
-        font-size: 0.85rem;
-      }
-      section {
-        padding: 2.5rem 1rem;
+        font-size: 0.8rem;
       }
     }
   </style>
@@ -404,7 +401,7 @@
     </ul>
   </header>
 
-  <!-- HERO SECTION CON CARRUSEL -->
+  <!-- HERO SECTION -->
   <section class="hero">
     <div class="hero-carousel">
       <div class="carousel-slide active" style="background-image: url('img/panderetas1.jpeg');"></div>
@@ -583,7 +580,6 @@
     <p>© 2026 JC Inversiones y Vibrados Spa - Limache.</p>
   </footer>
 
-  <!-- SCRIPT DEL CARRUSEL -->
   <script>
     const slides = document.querySelectorAll('.carousel-slide');
     const dots = document.querySelectorAll('.dot');
