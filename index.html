@@ -1,682 +1,316 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-CL">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JC Inversiones y Vibrados Spa | Limache</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <style>
-    :root {
-      --primary-color: #1a1a1a;
-      --primary-hover: #333333;
-      --accent-color: #f5c518;
-      --dark-text: #1a1a1a;
-      --gray-text: #555555;
-      --bg-page: #f4f5f7;
-      --bg-light: #ffffff;
-      --white: #ffffff;
-      --whatsapp-color: #25d366;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cierres perimetrales y panderetas de hormigón en Limache | JC Inversiones y Vibrados</title>
+<meta name="description" content="Fabricación e instalación de panderetas y cierres perimetrales de hormigón vibrado, postes, bloques, pastelones, pozos profundos y transporte en Limache y la Región de Valparaíso. Cotiza por WhatsApp.">
+<meta property="og:title" content="JC Inversiones y Vibrados | Limache">
+<meta property="og:description" content="Cierres perimetrales de hormigón vibrado, materiales de construcción, pozos profundos y transporte.">
+<meta property="og:image" content="img/panderetas1.jpeg">
+<link rel="icon" href="img/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Public+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","name":"JC Inversiones y Vibrados SpA","telephone":"+56978851498","email":"famasi.ventas@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Limache","addressRegion":"Valparaíso","addressCountry":"CL"},"geo":{"@type":"GeoCoordinates","latitude":-33.0165809,"longitude":-71.2726008},"areaServed":"Región de Valparaíso"}
+</script>
+<style>
+:root{
+  --bg:#EEECE8; --panel:#E2DFD9; --ink:#1E2125; --muted:#5A5F66;
+  --dark:#23272C; --on-dark:#F1EFEA; --accent:#D8901C; --accent-ink:#1E2125; --wa:#178F4A;
+  --line:#C9C5BD;
+  --head:'Barlow Condensed','Arial Narrow',Impact,sans-serif;
+  --body:'Public Sans',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:var(--body);background:var(--bg);color:var(--ink);line-height:1.6;font-size:17px}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--head);line-height:1.05;font-weight:700;letter-spacing:.01em}
+h2{font-size:clamp(2rem,5vw,3rem);margin-bottom:12px}
+h3{font-size:1.5rem;margin-bottom:6px}
+section{padding:72px 0}
+.lead{color:var(--muted);max-width:60ch;margin-bottom:36px}
+.btn{display:inline-block;padding:14px 26px;font-weight:700;text-decoration:none;border:2px solid transparent;font-size:1rem;cursor:pointer;font-family:var(--body)}
+.btn-main{background:var(--accent);color:var(--accent-ink)}
+.btn-main:hover{background:#c27f12}
+.btn-line{border-color:currentColor}
+.btn-line:hover{background:rgba(255,255,255,.12)}
+.btn-wa{background:var(--wa);color:#fff}
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    }
+/* header */
+header{position:sticky;top:0;z-index:20;background:var(--dark);color:var(--on-dark);border-bottom:4px solid var(--accent)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-family:var(--head);font-size:1.35rem;font-weight:700}
+.brand img{width:42px;height:42px;object-fit:cover;border-radius:4px}
+nav ul{display:flex;gap:26px;list-style:none;padding:0;align-items:center}
+nav a{text-decoration:none;font-weight:500}
+nav a:hover{color:var(--accent)}
+.menu-btn{display:none;background:none;border:2px solid var(--on-dark);color:var(--on-dark);padding:6px 12px;font:inherit;cursor:pointer}
 
-    html {
-      scroll-behavior: smooth;
-    }
+/* hero */
+.hero{background:var(--dark);color:var(--on-dark);padding:0}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center;padding-top:56px;padding-bottom:56px}
+.hero h1{font-size:clamp(2.6rem,6.5vw,4.6rem);margin-bottom:18px}
+.hero p{max-width:48ch;color:#CFCCC5;margin-bottom:12px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.hero .wrap{max-width:1200px}
+.hero-img{min-width:0}
+.hero-img img{width:100%;aspect-ratio:4/3;object-fit:cover;border-bottom:8px solid var(--accent)}
 
-    body {
-      color: var(--dark-text);
-      line-height: 1.6;
-      background-color: var(--bg-page);
-      overflow-x: hidden;
-    }
+/* strip */
+.strip{background:var(--accent);color:var(--accent-ink);padding:0}
+.strip ul{list-style:none;padding:0;display:grid;grid-template-columns:repeat(4,1fr)}
+.strip li{padding:18px 16px;font-weight:700;border-right:1px solid rgba(0,0,0,.2)}
+.strip li:last-child{border:0}
+.strip small{display:block;font-weight:500;font-size:.85rem}
 
-    /* HEADER */
-    header {
-      background-color: var(--primary-color);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.5rem 1rem;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.3);
-      border-bottom: 3px solid var(--accent-color);
-    }
-    
-    .logo-container {
-      display: flex;
-      align-items: center;
-      gap: 0.7rem;
-      font-weight: 800;
-      font-size: 0.95rem;
-      color: var(--white);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      text-decoration: none;
-      cursor: pointer;
-    }
-    .logo-container img {
-      height: 45px;
-      width: 45px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid var(--accent-color);
-      box-shadow: 0 2px 5px rgba(0,0,0,0.4);
-    }
+/* servicios */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:var(--panel);padding:26px;border-left:6px solid var(--accent)}
+.card p{color:var(--muted);font-size:.97rem}
 
-    /* MENÚ DE NAVEGACIÓN ESCRITORIO */
-    .nav-links {
-      display: flex;
-      gap: 1.2rem;
-      list-style: none;
-    }
-    .nav-links a {
-      color: var(--white);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-      transition: color 0.2s;
-    }
-    .nav-links a:hover {
-      color: var(--accent-color);
-    }
+/* galería */
+.gallery{background:var(--panel)}
+.g-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.g-item{background:var(--dark);color:var(--on-dark);border:0;padding:0;text-align:left;cursor:pointer;font:inherit}
+.g-item img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.g-item span{display:block;padding:12px 14px;font-family:var(--head);font-size:1.2rem;font-weight:600}
+.g-item:hover span{color:var(--accent)}
+dialog{border:0;padding:0;background:transparent;max-width:min(94vw,980px);width:100%}
+dialog::backdrop{background:rgba(0,0,0,.85)}
+dialog figure{background:var(--dark);color:var(--on-dark);margin:0}
+dialog img{width:100%;max-height:78vh;object-fit:contain;background:#000}
+dialog figcaption{padding:14px 18px}
+dialog figcaption p{color:#CFCCC5;font-size:.95rem}
+.close{position:absolute;top:8px;right:8px;background:var(--accent);border:0;font-size:1.4rem;width:42px;height:42px;cursor:pointer;z-index:2}
 
-    /* BOTÓN MENÚ HAMBURGUESA (MÓVIL) */
-    .menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      color: var(--white);
-      font-size: 1.8rem;
-      cursor: pointer;
-    }
+/* proceso */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;list-style:none;padding:0;counter-reset:s}
+.steps li{counter-increment:s;border-top:4px solid var(--ink);padding-top:14px}
+.steps li::before{content:counter(s);font-family:var(--head);font-size:2.6rem;font-weight:700;color:var(--accent);line-height:1}
+.steps p{color:var(--muted);font-size:.97rem}
 
-    /* MENÚ DESPLEGABLE MÓVIL */
-    .mobile-menu {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background-color: var(--primary-color);
-      flex-direction: column;
-      list-style: none;
-      border-bottom: 3px solid var(--accent-color);
-      box-shadow: 0 5px 10px rgba(0,0,0,0.3);
-    }
-    .mobile-menu.active {
-      display: flex;
-    }
-    .mobile-menu li {
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-    .mobile-menu a {
-      display: block;
-      padding: 1rem;
-      color: var(--white);
-      text-decoration: none;
-      font-weight: 600;
-      text-align: center;
-    }
-    .mobile-menu a:hover {
-      background-color: rgba(245, 197, 24, 0.2);
-      color: var(--accent-color);
-    }
+/* nosotros */
+.about{background:var(--dark);color:var(--on-dark)}
+.about .cols{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.about p{color:#CFCCC5;margin-bottom:14px}
+.about ul{padding-left:0;list-style:none}
+.about li{padding:14px 0;border-bottom:1px solid #41464d}
+.about li strong{color:var(--accent)}
 
-    /* HERO SECTION */
-    .hero {
-      position: relative;
-      color: var(--white);
-      text-align: center;
-      padding: 3rem 1rem 4rem 1rem;
-      min-height: 85vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-    }
+/* faq */
+details{border-bottom:1px solid var(--line);padding:16px 0}
+summary{font-weight:700;cursor:pointer;font-size:1.05rem}
+details p{color:var(--muted);margin-top:8px;max-width:70ch}
 
-    .hero-carousel {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -2;
-    }
-    .carousel-slide {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-position: center;
-      opacity: 0;
-      transition: opacity 1.2s ease-in-out;
-    }
-    .carousel-slide.active {
-      opacity: 1;
-    }
-    .hero::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.7);
-      z-index: -1;
-    }
+/* contacto */
+.contact .cols{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.map{width:100%;height:100%;min-height:320px;border:0}
+.info{list-style:none;padding:0;margin:14px 0 22px}
+.info li{padding:6px 0}
+label{display:block;font-weight:700;margin:14px 0 4px}
+input,textarea{width:100%;padding:12px;border:2px solid var(--line);background:#fff;font:inherit;color:var(--ink)}
+input:focus,textarea:focus{border-color:var(--accent);outline:none}
+textarea{min-height:110px;resize:vertical}
+form .btn{margin-top:18px;width:100%}
+.note{font-size:.85rem;color:var(--muted);margin-top:8px}
 
-    .hero h1 {
-      font-size: 1.35rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      margin-bottom: 0.6rem;
-      max-width: 700px;
-      text-shadow: 0 2px 5px rgba(0,0,0,0.8);
-    }
+footer{background:var(--dark);color:#B9B6AF;text-align:center;padding:28px 20px;font-size:.9rem}
+.float-wa{position:fixed;right:16px;bottom:16px;z-index:30;background:var(--wa);color:#fff;text-decoration:none;font-weight:700;padding:14px 20px;box-shadow:0 4px 14px rgba(0,0,0,.35)}
 
-    .hero-sub {
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
-      margin-bottom: 1.2rem;
-      font-size: 0.85rem;
-      font-weight: 500;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.8);
-      padding: 0 0.5rem;
-    }
-    .hero-sub div {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.4rem;
-      text-align: center;
-    }
-
-    .cta-container {
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-      width: 100%;
-      max-width: 280px;
-      margin-bottom: 1.2rem;
-    }
-    .btn-cta {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      background-color: var(--accent-color);
-      color: var(--dark-text);
-      text-decoration: none;
-      font-weight: 800;
-      padding: 0.75rem 1rem;
-      border-radius: 4px;
-      font-size: 0.95rem;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-      transition: transform 0.2s, background-color 0.2s;
-    }
-    .btn-cta:hover {
-      transform: translateY(-2px);
-      background-color: #e0b412;
-    }
-
-    .carousel-dots {
-      display: flex;
-      gap: 8px;
-      z-index: 10;
-    }
-    .dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background-color: rgba(255, 255, 255, 0.4);
-      border: 2px solid rgba(0,0,0,0.3);
-      cursor: pointer;
-      transition: background-color 0.3s, transform 0.3s;
-    }
-    .dot.active {
-      background-color: var(--accent-color);
-      transform: scale(1.3);
-    }
-
-    section {
-      padding: 3rem 1rem;
-      text-align: center;
-    }
-    .section-title {
-      font-size: 1.5rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 0.5rem;
-    }
-    .title-line {
-      width: 60px;
-      height: 4px;
-      background-color: var(--accent-color);
-      margin: 0 auto 2rem auto;
-      border-radius: 2px;
-    }
-
-    /* GALERÍA / TARJETAS DE TRABAJOS */
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
-      max-width: 1100px;
-      margin: 0 auto;
-      text-align: left;
-    }
-    .portfolio-card {
-      background: var(--white);
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.06);
-      border-top: 4px solid var(--accent-color);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .portfolio-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-    .portfolio-content {
-      padding: 1.2rem;
-    }
-    .portfolio-content h3 {
-      font-size: 1.1rem;
-      margin-bottom: 0.4rem;
-      color: var(--dark-text);
-    }
-    .portfolio-content p {
-      color: var(--gray-text);
-      font-size: 0.9rem;
-      line-height: 1.4;
-    }
-
-    /* CONTACTO & MAPA */
-    .contact-container {
-      max-width: 600px;
-      margin: 0 auto;
-      text-align: left;
-      background: var(--white);
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    }
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-    .form-group label {
-      display: block;
-      font-size: 0.9rem;
-      font-style: italic;
-      margin-bottom: 0.3rem;
-    }
-    .form-group input, .form-group textarea {
-      width: 100%;
-      padding: 0.75rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 1rem;
-    }
-    .btn-submit {
-      background-color: var(--primary-color);
-      color: var(--white);
-      border: none;
-      padding: 0.8rem 2rem;
-      font-weight: 700;
-      border-radius: 4px;
-      cursor: pointer;
-      align-self: flex-end;
-      transition: background-color 0.2s;
-    }
-
-    .map-container {
-      width: 100%;
-      max-width: 700px;
-      height: 220px;
-      margin: 0 auto 2rem auto;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    }
-    .map-container iframe {
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-
-    /* BOTONES FLOTANTES */
-    .floating-whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: var(--whatsapp-color);
-      color: var(--white);
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.6rem;
-      text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      z-index: 1000;
-    }
-    .floating-top {
-      position: fixed;
-      bottom: 78px;
-      right: 23px;
-      background-color: rgba(30, 30, 30, 0.85);
-      color: var(--white);
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      z-index: 1000;
-    }
-
-    footer {
-      border-top: 4px solid var(--accent-color);
-      background-color: var(--primary-color);
-      color: var(--white);
-      padding: 2rem 1rem;
-      text-align: center;
-      font-size: 0.85rem;
-    }
-
-    /* MEDIA QUERY PARA ACTIVAR EL MENÚ HAMBURGUESA EN MÓVIL */
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none; /* Oculta el menú fijo de computadora */
-      }
-      .menu-toggle {
-        display: block; /* Muestra el botón de hamburguesa en celular */
-      }
-      .logo-container span {
-        font-size: 0.75rem;
-      }
-      .logo-container img {
-        height: 38px;
-        width: 38px;
-      }
-      .hero h1 {
-        font-size: 1.15rem;
-      }
-      .hero-sub {
-        font-size: 0.78rem;
-      }
-    }
-  </style>
+@media(max-width:820px){
+  .menu-btn{display:block}
+  nav{display:none;position:absolute;top:72px;left:0;right:0;background:var(--dark);padding:12px 20px 20px}
+  nav.open{display:block}
+  nav ul{flex-direction:column;align-items:flex-start;gap:14px}
+  .hero .wrap,.about .cols,.contact .cols{grid-template-columns:1fr}
+  .strip ul{grid-template-columns:1fr 1fr}
+  .strip li:nth-child(2){border:0}
+  section{padding:52px 0}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
-<body id="inicio">
+<body>
 
-  <header>
-    <a href="#inicio" class="logo-container">
-      <img src="img/logo.jpg" alt="JC Inversiones Logo">
-      <span>JC Inversiones y Vibrados</span>
-    </a>
-    
-    <!-- Menú normal para computadoras -->
-    <ul class="nav-links">
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#servicios">Trabajos</a></li>
-      <li><a href="#nosotros">Nosotros</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-
-    <!-- Botón de Menú Hamburguesa para celulares -->
-    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menú">
-      <i class="bi bi-list"></i>
-    </button>
-
-    <!-- Lista desplegable móvil -->
-    <ul class="mobile-menu" id="mobileMenu">
-      <li><a href="#inicio" onclick="toggleMenu()">Inicio</a></li>
-      <li><a href="#servicios" onclick="toggleMenu()">Trabajos</a></li>
-      <li><a href="#nosotros" onclick="toggleMenu()">Nosotros</a></li>
-      <li><a href="#contacto" onclick="toggleMenu()">Contacto</a></li>
-    </ul>
-  </header>
-
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <div class="hero-carousel">
-      <div class="carousel-slide active" style="background-image: url('img/panderetas1.jpeg');"></div>
-      <div class="carousel-slide" style="background-image: url('img/panderetas3.jpeg');"></div>
-      <div class="carousel-slide" style="background-image: url('img/panderetas9.jpeg');"></div>
-      <div class="carousel-slide" style="background-image: url('img/panderetas10.jpeg');"></div>
-    </div>
-
-    <h1>Fabricación e Instalación de Vibrados y Cierres Perimetrales</h1>
-    
-    <div class="hero-sub">
-      <div><i class="bi bi-geo-alt-fill" style="color: var(--accent-color);"></i> Ubicados en Limache (Al costado del Cementerio) — Valparaíso.</div>
-      <div><i class="bi bi-tools" style="color: var(--accent-color);"></i> Pozos Profundos, Transporte y Materiales de Construcción.</div>
-    </div>
-    
-    <div class="cta-container">
-      <a href="https://wa.me/56978851498" class="btn-cta" target="_blank">
-        <i class="bi bi-whatsapp"></i> Cotiza Aquí
-      </a>
-      <a href="tel:+56978851498" class="btn-cta">
-        <i class="bi bi-telephone-fill"></i> +56 9 7885 1498
-      </a>
-    </div>
-
-    <div class="carousel-dots">
-      <button class="dot active" onclick="goToSlide(0)"></button>
-      <button class="dot" onclick="goToSlide(1)"></button>
-      <button class="dot" onclick="goToSlide(2)"></button>
-      <button class="dot" onclick="goToSlide(3)"></button>
-    </div>
-  </section>
-
-  <!-- SECCIÓN DE TRABAJOS -->
-  <section id="servicios">
-    <h2 class="section-title">Nuestros Trabajos y Diseños</h2>
-    <div class="title-line"></div>
-    
-    <div class="portfolio-grid">
-      <div class="portfolio-card">
-        <img src="img/panderetas1.jpeg" alt="Pandereta 1">
-        <div class="portfolio-content">
-          <h3>Cierre Estilo Madera</h3>
-          <p>Diseño premium de placas de hormigón vibrado que simulan la textura y calidez de la madera natural, brindando máxima elegancia y privacidad.</p>
-        </div>
-      </div>
-      <div class="portfolio-card">
-        <img src="img/panderetas2.jpeg" alt="Pandereta 2">
-        <div class="portfolio-content">
-          <h3>Cierre Perimetral con Celosía</h3>
-          <p>Instalación profesional combinando placas lisas con diseño superior ornamentado de celosías, ideal para dejar pasar ventilación y luz.</p>
-        </div>
-      </div>
-      <div class="portfolio-card">
-        <img src="img/panderetas3.jpeg" alt="Pandereta 3">
-        <div class="portfolio-content">
-          <h3>Pandereta Ornamentada Lineal</h3>
-          <p>Paneles con relieves lineales reforzados diseñados para aportar un toque estético moderno y mayor resistencia estructural en perímetros.</p>
-        </div>
-      </div>
-      <div class="portfolio-card">
-        <img src="img/panderetas4.jpeg" alt="Pandereta 4">
-        <div class="portfolio-content">
-          <h3>Delimitación Firme y Sólida</h3>
-          <p>Estructura robusta de hormigón instalada en terrenos complejos, asegurando estabilidad y protección duradera para parcelas.</p>
-        </div>
-      </div>
-      <div class="portfolio-card">
-        <img src="img/panderetas5.jpeg" alt="Pandereta 5">
-        <div class="portfolio-content">
-          <h3>Instalación en Linderos</h3>
-          <p>Trabajos detallados de nivelación y montaje de placas para una separación limpia y segura entre propiedades vecinas.</p>
-        </div>
-      </div>
-      <div class="portfolio-card">
-        <img src="img/panderetas6.jpeg" alt="Pandereta 6">
-        <div class="portfolio-content">
-          <h3>Paneles Texturizados</h3>
-          <p>Variedad en texturas de hormigón de alta densidad preparadas para soportar condiciones climáticas exigentes sin perder estética.</p>
-        </div>
-      </div>
-      <div class="portfolio-card">
-        <img src="img/panderetas7.jpeg" alt="Pandereta 7">
-        <div class="portfolio-content">
-          <h3>Fabricación de Postes y Canales</h3>
-          <p>Producción propia de postes rectos y ranurados de alta resistencia reforzados con acero para garantizar una base firme.</p>
-        </div>
-      </div>
-      <div class="portfolio-card">
-        <img src="img/panderetas8.jpeg" alt="Pandereta 8">
-        <div class="portfolio-content">
-          <h3>Cierres Residenciales Completos</h3>
-          <p>Soluciones integrales de cercos y panderetas ejecutadas con rapidez y precisión para proyectos habitacionales y comerciales.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SOBRE NOSOTROS -->
-  <section id="nosotros">
-    <h2 class="section-title">Sobre Nosotros</h2>
-    <div class="title-line"></div>
-    
-    <div style="max-width: 850px; margin: 0 auto; text-align: left; background: var(--white); padding: 1.8rem; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-left: 5px solid var(--accent-color);">
-      
-      <p style="color: var(--dark-text); font-size: 1rem; margin-bottom: 1.2rem; line-height: 1.7;">
-        En <strong>JC Inversiones y Vibrados SpA</strong>, contamos con años de experiencia entregando soluciones sólidas, seguras y de alto nivel estético para proyectos particulares, parcelas y constructoras en toda la <strong>Región de Valparaíso</strong>.
-      </p>
-
-      <p style="color: var(--dark-text); font-size: 1rem; margin-bottom: 1.5rem; line-height: 1.7;">
-        Nos especializamos en la fabricación, venta e instalación de <strong>cierres perimetrales y panderetas de hormigón</strong> de máxima durabilidad, ofreciendo desde modelos tradicionales hasta modernos diseños con efecto madera que combinan a la perfección resistencia y elegancia.
-      </p>
-
-      <p style="color: var(--gray-text); font-size: 0.95rem; margin-bottom: 1rem; font-weight: 600;">
-        Además de nuestros prefabricados, nos distinguimos por brindar una oferta integral para la construcción y el desarrollo de terrenos, que incluye:
-      </p>
-
-      <ul style="list-style: none; padding-left: 0; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.8rem;">
-        <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--dark-text); font-size: 0.95rem;">
-          <i class="bi bi-check-circle-fill" style="color: var(--accent-color); font-size: 1.1rem; margin-top: 2px;"></i>
-          <div><strong>Venta de materiales de primera calidad:</strong> Bloques de hormigón, pastelones tradicionales y especiales para piscina, arena por saco y gravilla.</div>
-        </li>
-        <li style="display: flex; align-items: flex-start; gap: 0.6rem; color: var(--dark-text); font-size: 0.95rem;">
-          <i class="bi bi-check-circle-fill" style="color: var(--accent-color); font-size: 1.1rem; margin-top: 2px;"></i>
-          <div><strong>Servicios especializados:</strong> Ejecución de pozos profundos y transporte de carga confiable y seguro.</div>
-        </li>
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#inicio"><img src="img/logo.jpg" alt="Logo JC Inversiones"><span>JC Inversiones y Vibrados</span></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="menu">Menú</button>
+    <nav id="menu" aria-label="Principal">
+      <ul>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#trabajos">Trabajos</a></li>
+        <li><a href="#proceso">Cómo trabajamos</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a class="btn btn-main" href="https://wa.me/56978851498?text=Hola%2C%20quiero%20cotizar" style="padding:8px 16px">Cotiza</a></li>
       </ul>
+    </nav>
+  </div>
+</header>
 
-      <p style="color: var(--dark-text); font-size: 0.95rem; line-height: 1.6; border-top: 1px solid #eee; padding-top: 1.2rem; font-style: italic;">
-        Trabajamos con un fuerte compromiso hacia nuestros clientes, garantizando calidad en cada producto, cumplimiento en los plazos y un trabajo 100% garantizado en terreno.
-      </p>
-
+<main>
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <div>
+      <h1>Cierres perimetrales de hormigón vibrado</h1>
+      <p>Fabricamos e instalamos panderetas, postes y cierres para parcelas, casas y constructoras en Limache y toda la Región de Valparaíso.</p>
+      <p>También vendemos materiales de construcción, ejecutamos pozos profundos y hacemos transporte.</p>
+      <div class="cta">
+        <a class="btn btn-main" href="https://wa.me/56978851498?text=Hola%2C%20quiero%20cotizar%20un%20cierre%20perimetral">Cotiza por WhatsApp</a>
+        <a class="btn btn-line" href="tel:+56978851498">Llamar al +56 9 7885 1498</a>
+      </div>
     </div>
-
-    <div class="cta-container" style="margin: 2rem auto 0 auto; max-width: 320px;">
-      <a href="https://wa.me/56978851498" class="btn-cta" target="_blank">
-        <i class="bi bi-whatsapp"></i> Escríbenos a WhatsApp
-      </a>
+    <div class="hero-img">
+      <img src="img/panderetas1.jpeg" alt="Cierre perimetral de hormigón vibrado estilo madera instalado por JC Inversiones">
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CONTACTO & MAPA -->
-  <section id="contacto">
-    <h2 class="section-title">Contacto</h2>
-    <div class="title-line"></div>
+<div class="strip">
+  <div class="wrap">
+    <ul>
+      <li>Fabricación propia<small>Postes, placas y canales</small></li>
+      <li>Instalación en terreno<small>Trabajo garantizado</small></li>
+      <li>Materiales y transporte<small>Todo en un solo lugar</small></li>
+      <li>Región de Valparaíso<small>Local en Limache</small></li>
+    </ul>
+  </div>
+</div>
 
-    <div class="map-container">
-      <iframe src="https://maps.google.com/maps?q=-33.0165809,-71.2726008&z=15&output=embed" allowfullscreen="" loading="lazy"></iframe>
+<section id="servicios">
+  <div class="wrap">
+    <h2>Qué hacemos</h2>
+    <p class="lead">Desde el cierre de una parcela hasta el pozo y los materiales para la obra.</p>
+    <div class="grid">
+      <article class="card"><h3>Cierres y panderetas</h3><p>Placas de hormigón vibrado lisas, estilo madera, con celosía o texturizadas. Fabricación, venta e instalación.</p></article>
+      <article class="card"><h3>Postes y canales</h3><p>Postes rectos y ranurados reforzados con acero, de producción propia.</p></article>
+      <article class="card"><h3>Bloques y pastelones</h3><p>Bloques de hormigón, pastelones tradicionales y especiales para piscina.</p></article>
+      <article class="card"><h3>Arena y gravilla</h3><p>Arena por saco y gravilla para tus obras y terminaciones.</p></article>
+      <article class="card"><h3>Pozos profundos</h3><p>Ejecución de pozos profundos para parcelas y proyectos.</p></article>
+      <article class="card"><h3>Transporte de carga</h3><p>Traslado confiable y seguro de materiales y carga.</p></article>
     </div>
+  </div>
+</section>
 
-    <div class="contact-container">
-      <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">Consúltanos</h3>
-      <p style="color: var(--gray-text);">Comunícate al <strong>+56 9 7885 1498</strong> o escríbenos a <strong>famasi.ventas@gmail.com</strong>, o completa el formulario a continuación:</p>
-      
-      <form class="contact-form">
-        <div class="form-group">
-          <label>Nombre</label>
-          <input type="text" required>
-        </div>
-        <div class="form-group">
-          <label>Teléfono</label>
-          <input type="tel" required>
-        </div>
-        <div class="form-group">
-          <label>Mensaje...</label>
-          <textarea rows="4" required></textarea>
-        </div>
-        <button type="submit" class="btn-submit">Enviar</button>
-      </form>
+<section class="gallery" id="trabajos">
+  <div class="wrap">
+    <h2>Trabajos realizados</h2>
+    <p class="lead">Toca una foto para verla en grande.</p>
+    <div class="g-grid" id="gal"></div>
+  </div>
+</section>
+
+<section id="proceso">
+  <div class="wrap">
+    <h2>Cómo trabajamos</h2>
+    <p class="lead">Un proceso simple, de la primera consulta a la instalación.</p>
+    <ol class="steps">
+      <li><h3>Escríbenos</h3><p>Cuéntanos por WhatsApp qué necesitas, los metros aproximados y tu comuna.</p></li>
+      <li><h3>Medimos y cotizamos</h3><p>Definimos el modelo y te entregamos un presupuesto claro.</p></li>
+      <li><h3>Fabricamos</h3><p>Producimos placas y postes en nuestra planta de Limache.</p></li>
+      <li><h3>Instalamos</h3><p>Nivelación y montaje en terreno, con trabajo garantizado.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="about" id="nosotros">
+  <div class="wrap cols">
+    <div>
+      <h2>Sobre nosotros</h2>
+      <p>En JC Inversiones y Vibrados SpA entregamos soluciones sólidas, seguras y con buena terminación para particulares, parcelas y constructoras.</p>
+      <p>Nos especializamos en cierres perimetrales y panderetas de hormigón, desde modelos tradicionales hasta diseños con efecto madera.</p>
+      <p>Cumplimos plazos y respondemos por cada trabajo en terreno.</p>
+      <a class="btn btn-main" href="https://wa.me/56978851498">Escríbenos a WhatsApp</a>
     </div>
-  </section>
+    <ul>
+      <li><strong>Calidad:</strong> hormigón de alta densidad, reforzado con acero.</li>
+      <li><strong>Cumplimiento:</strong> plazos claros desde la cotización.</li>
+      <li><strong>Garantía:</strong> trabajo 100% garantizado en terreno.</li>
+      <li><strong>Cercanía:</strong> estamos en Limache, al costado del Cementerio.</li>
+    </ul>
+  </div>
+</section>
 
-  <a href="#inicio" class="floating-top" aria-label="Subir"><i class="bi bi-chevron-up"></i></a>
-  <a href="https://wa.me/56978851498" class="floating-whatsapp" target="_blank" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+<section id="faq">
+  <div class="wrap">
+    <h2>Preguntas frecuentes</h2>
+    <details><summary>¿Cómo pido una cotización?</summary><p>Escríbenos por WhatsApp con los metros aproximados, el modelo que te interesa y tu comuna. Te respondemos con una propuesta.</p></details>
+    <details><summary>¿Trabajan fuera de Limache?</summary><p>Sí, atendemos proyectos en la Región de Valparaíso. Consúltanos por tu sector.</p></details>
+    <details><summary>¿Solo venden o también instalan?</summary><p>Hacemos ambas cosas: fabricación, venta e instalación de cierres, además de venta de materiales.</p></details>
+    <details><summary>¿Qué modelos de cierre tienen?</summary><p>Estilo madera, lisas, con celosía, ornamentadas y texturizadas. Mira la sección de trabajos para ver ejemplos.</p></details>
+    <details><summary>¿Puedo comprar solo materiales?</summary><p>Sí. Vendemos bloques, pastelones, arena por saco y gravilla.</p></details>
+  </div>
+</section>
 
-  <footer>
-    <p>© 2026 JC Inversiones y Vibrados Spa - Limache.</p>
-  </footer>
+<section class="contact" id="contacto" style="background:var(--panel)">
+  <div class="wrap">
+    <h2>Contacto</h2>
+    <div class="cols">
+      <div>
+        <ul class="info">
+          <li><strong>Dirección:</strong> Limache, al costado del Cementerio</li>
+          <li><strong>Teléfono:</strong> <a href="tel:+56978851498">+56 9 7885 1498</a></li>
+          <li><strong>Correo:</strong> <a href="mailto:famasi.ventas@gmail.com">famasi.ventas@gmail.com</a></li>
+        </ul>
+        <form id="f">
+          <label for="n">Nombre</label><input id="n" required autocomplete="name">
+          <label for="t">Teléfono</label><input id="t" type="tel" autocomplete="tel">
+          <label for="m">¿Qué necesitas?</label><textarea id="m" placeholder="Ej: 30 metros de pandereta estilo madera en Olmué" required></textarea>
+          <button class="btn btn-wa" type="submit">Enviar por WhatsApp</button>
+          <p class="note">Al enviar se abre WhatsApp con tu mensaje listo.</p>
+        </form>
+      </div>
+      <iframe class="map" title="Ubicación de JC Inversiones en Limache" loading="lazy" src="https://maps.google.com/maps?q=-33.0165809,-71.2726008&z=15&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+</main>
 
-  <script>
-    // Script para el menú hamburguesa móvil
-    function toggleMenu() {
-      const menu = document.getElementById('mobileMenu');
-      menu.classList.toggle('active');
-    }
+<footer>© 2026 JC Inversiones y Vibrados SpA · Limache, Región de Valparaíso</footer>
 
-    // Script para el carrusel de fotos
-    const slides = document.querySelectorAll('.carousel-slide');
-    const dots = document.querySelectorAll('.dot');
-    let currentIndex = 0;
-    let slideTimer;
+<a class="float-wa" href="https://wa.me/56978851498?text=Hola%2C%20quiero%20cotizar" aria-label="Escribir por WhatsApp">WhatsApp</a>
 
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.classList.remove('active');
-        dots[i].classList.remove('active');
-      });
-      currentIndex = index;
-      slides[currentIndex].classList.add('active');
-      dots[currentIndex].classList.add('active');
-    }
+<dialog id="lb"><button class="close" aria-label="Cerrar">×</button><figure><img alt=""><figcaption><h3></h3><p></p></figcaption></figure></dialog>
 
-    function nextSlide() {
-      let nextIndex = (currentIndex + 1) % slides.length;
-      showSlide(nextIndex);
-    }
+<script>
+const works=[
+["panderetas1","Cierre estilo madera","Placas de hormigón vibrado que imitan la textura de la madera, con privacidad y buena terminación."],
+["panderetas2","Cierre con celosía","Placas lisas combinadas con celosías ornamentales que dejan pasar luz y ventilación."],
+["panderetas3","Pandereta ornamentada lineal","Paneles con relieves lineales reforzados, estéticos y resistentes."],
+["panderetas4","Delimitación firme y sólida","Estructura robusta de hormigón instalada en terrenos complejos."],
+["panderetas5","Instalación en linderos","Nivelación y montaje para una separación limpia entre propiedades."],
+["panderetas6","Paneles texturizados","Hormigón de alta densidad preparado para resistir el clima."],
+["panderetas7","Postes y canales","Postes rectos y ranurados de producción propia, reforzados con acero."],
+["panderetas8","Cierres residenciales","Cercos y panderetas para proyectos habitacionales y comerciales."]
+];
+const gal=document.getElementById('gal'),lb=document.getElementById('lb');
+works.forEach(([f,t,d])=>{
+  const b=document.createElement('button');b.className='g-item';
+  b.innerHTML=`<img loading="lazy" src="img/${f}.jpeg" alt="${t}"><span>${t}</span>`;
+  b.onclick=()=>{lb.querySelector('img').src=`img/${f}.jpeg`;lb.querySelector('img').alt=t;
+    lb.querySelector('h3').textContent=t;lb.querySelector('p').textContent=d;lb.showModal()};
+  gal.appendChild(b);
+});
+lb.querySelector('.close').onclick=()=>lb.close();
+lb.addEventListener('click',e=>{if(e.target===lb)lb.close()});
 
-    function goToSlide(index) {
-      showSlide(index);
-      resetTimer();
-    }
+const mb=document.querySelector('.menu-btn'),nav=document.getElementById('menu');
+mb.onclick=()=>{const o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o)};
+nav.querySelectorAll('a').forEach(a=>a.onclick=()=>{nav.classList.remove('open');mb.setAttribute('aria-expanded',false)});
 
-    function resetTimer() {
-      clearInterval(slideTimer);
-      slideTimer = setInterval(nextSlide, 4000);
-    }
-
-    slideTimer = setInterval(nextSlide, 4000);
-  </script>
+document.getElementById('f').addEventListener('submit',e=>{
+  e.preventDefault();
+  const n=document.getElementById('n').value,t=document.getElementById('t').value,m=document.getElementById('m').value;
+  const txt=`Hola, soy ${n}${t?' ('+t+')':''}. ${m}`;
+  window.open('https://wa.me/56978851498?text='+encodeURIComponent(txt),'_blank');
+});
+</script>
 </body>
 </html>
