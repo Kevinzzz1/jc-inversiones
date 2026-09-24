@@ -288,13 +288,16 @@ const works=[
 ["panderetas5","Instalación en linderos","Nivelación y montaje para una separación limpia entre propiedades."],
 ["panderetas6","Paneles texturizados","Hormigón de alta densidad preparado para resistir el clima."],
 ["panderetas7","Postes y canales","Postes rectos y ranurados de producción propia, reforzados con acero."],
-["panderetas8","Cierres residenciales","Cercos y panderetas para proyectos habitacionales y comerciales."]
+["panderetas8","Cierres residenciales","Cercos y panderetas para proyectos habitacionales y comerciales."],
+["panderetas9","Estilo madera oscuro","Placas con veta de madera en tono oscuro, sobre base de hormigón y junto a la vereda."],
+["panderetas10","Cierre liso de hormigón","Placas lisas grises con postes ranurados, para un cierre limpio y sobrio en pasajes y patios."]
 ];
+function fb(i){const e=['jpeg','jpg','png','webp'];const k=(+i.dataset.k||0)+1;if(k<e.length){i.dataset.k=k;i.src=i.src.replace(/\.\w+$/,'.'+e[k])}}
 const gal=document.getElementById('gal'),lb=document.getElementById('lb');
 works.forEach(([f,t,d])=>{
   const b=document.createElement('button');b.className='g-item';
-  b.innerHTML=`<img loading="lazy" src="img/${f}.jpeg" alt="${t}"><span>${t}</span>`;
-  b.onclick=()=>{lb.querySelector('img').src=`img/${f}.jpeg`;lb.querySelector('img').alt=t;
+  b.innerHTML=`<img loading="lazy" src="img/${f}.jpeg" alt="${t}" onerror="fb(this)"><span>${t}</span>`;
+  b.onclick=()=>{lb.querySelector('img').src=b.querySelector('img').src;lb.querySelector('img').alt=t;
     lb.querySelector('h3').textContent=t;lb.querySelector('p').textContent=d;lb.showModal()};
   gal.appendChild(b);
 });
